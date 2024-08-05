@@ -1,0 +1,284 @@
+/*样式中的函数和变量*/
+:root {
+  --screen-width: 1100px;
+}
+/* css 中的注释 */ /* basic css begin */
+html{
+  height: 1575px;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul,
+li {
+  list-style: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.cb {
+  clear: both;
+}
+/* basic css end */
+/* 默认网页的视野区域1100 */
+
+header {
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+}
+
+/* 子节点样式 */
+header .container {
+  width: var(--screen-width);
+  margin: 0 auto;
+  height: 70px;
+}
+
+.logo {
+  font-size: 40px;
+  line-height: 70px;
+  padding: 0 10px;
+  margin-right: 60px;
+}
+
+/* 标签两种 块状 内联 块状 默认占据一行 内联是塌陷的 默认 左对齐 */
+nav a {
+  display: block;
+  text-decoration: none;
+  line-height: 70px;
+  padding: 0 20px;
+  float: left;
+  position: relative;
+}
+
+nav .aDocs::after {
+  content: "docs";
+  display: inline-block;
+  width: 28px;
+  height: 20px;
+  padding: 0 3px;
+  background: #7832e2;
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #e8e8e8;
+  font-weight: bolder;
+}
+
+nav a,
+nav a:hover,
+nav a:visited,
+nav a:active {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+header .button {
+  width: 130px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #03a87c;
+  border: 1px solid #03a87c;
+  border-radius: 3px;
+  margin-top: 14px;
+}
+
+.ppt {
+  width: var(--screen-width);
+  margin: 0 auto;
+  background: #e8f3ec;
+  height: 460px;
+  overflow: hidden;
+}
+
+.ppt .textInfo,
+.ppt .img {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+
+.ppt .textInfo .contaienr {
+  width: 480px;
+  height: auto;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+
+.ppt .textInfo h2 {
+  font-size: 40px;
+}
+
+.ppt .textInfo p {
+  font-size: 20px;
+}
+
+.ppt .textInfo .button {
+  width: 140px;
+  height: 40px;
+  background: #000;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+
+.ppt_2{
+  width: var(--screen-width);
+  margin: 0 auto;
+  background: #fff;
+  height: 324px;
+  padding-top: 70px;
+  overflow: hidden;
+}
+
+.ppt_2 .articleList_right,
+.ppt_2 .articleList_left{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.ppt_2 .articleList_right .area{
+  height: 100px;
+}
+
+.ppt_2 .articleList_right .area .img{
+    width: 120px;
+    height: 80px;
+    float: left;
+}
+
+.ppt_2 .articleList_left .img{
+  width: 540px;
+  height: 128px;
+}
+
+.ppt_2 .articleList_right a{
+  display: block;
+  text-decoration: none;
+}
+
+.ppt_2 .articleList_right p{
+  margin: 0 0;
+  width: 372px;
+}
+
+.ppt_2 .articleList_right .pl{
+  padding-left: 16px;
+  width: 372px;
+  height: 75px;
+  float: left;
+}
+
+.ppt_3{
+  width: var(--screen-width);
+  margin: 0 auto;
+  background: #fff;
+  height: 600px;
+  padding-top: 0 15px;
+  overflow: hidden;
+}
+
+.ppt_3 .img{
+  width: 175px;
+  height: 120px;
+  float: right;
+}
+
+.ppt_3 .articleList_left{
+  width: 65%;
+  height: 600px;
+  padding: 0 15px;
+  float: left;
+}
+
+.ppt_3 .articleList_left .h5{
+
+}
+
+.ppt_3 .articleList_left .area{
+  width: 730px;
+  height: 160px;
+  margin-bottom: 16px;
+}
+
+.ppt_3 .articleList_left .pl{
+  width: 530px;
+  height: 150px;
+  padding-right: 16px;
+  float: left;
+}
+
+.ppt_3 .li::after {
+  content: "1";
+}
+
+.ppt_3 .articleList_right{
+    width: 28%;
+    height: 600px;
+    padding-left: 24px;
+    padding-right: 15px;
+    float: left;
+}
+
+@media screen and (min-width: 1100px) {
+}
+
+@media screen and (min-width: 990px) and (max-width: 1100px) {
+  :root {
+    --screen-width: 100%;
+  }
+  .ppt_2 .articleList_left .img{
+    width: 450px;
+  }
+}
+
+
+@media screen and (max-width: 990px){
+    :root {
+      --screen-width: 100%;
+  }
+  .ppt_2 .articleList_left,
+  .ppt_2 .articleList_right,
+  .ppt_2 .articleList_left .img{
+    width: 110%;
+    float: none;
+}
+.ppt,
+.ppt_2,
+.ppt_3{
+  overflow: unset;
+}
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --screen-width: 100%;
+  }
+
+  .ppt .textInfo,
+  .ppt .textInfo .contaienr,
+  .ppt .img {
+    width: 100%;
+    height: 500px;
+    float: none;
+  }
+
+  .ppt {
+    overflow: unset;
+  }
+}
